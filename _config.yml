@@ -19,7 +19,7 @@ remote_theme: mmistakes/so-simple-theme
 
 locale: en-US
 title: "javamon"
-description: "A simple Jekyll theme for words and pictures."
+description: "dev book"
 baseurl: ""
 url: "https://javamon1174.github.io"
 logo: "/images/so-simple-site-logo.png"
