@@ -20,8 +20,8 @@ remote_theme: mmistakes/so-simple-theme
 locale: en-US
 title: "So Simple"
 description: "A simple Jekyll theme for words and pictures."
-baseurl: "/so-simple-theme"
-url: "https://mmistakes.github.io"
+baseurl: ""
+url: "https://javamon1174.github.io"
 logo: "/images/so-simple-site-logo.png"
 date_format: "%B %-d, %Y"
 read_time: true
