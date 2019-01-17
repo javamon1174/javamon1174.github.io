@@ -1,5 +1,9 @@
 # Site navigation links
 
+- title: Who?
+  url: /who/
+- title: Projects
+  url: /projects/
 - title: Posts
   url: /posts/
 - title: Categories
