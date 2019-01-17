@@ -18,9 +18,9 @@
 remote_theme: mmistakes/so-simple-theme
 
 locale: en-US
-title: "So Simple"
+title: "javamon"
 description: "A simple Jekyll theme for words and pictures."
-baseurl: ""
+baseurl: "/so-simple-theme"
 url: "https://javamon1174.github.io"
 logo: "/images/so-simple-site-logo.png"
 date_format: "%B %-d, %Y"
@@ -32,11 +32,11 @@ google_fonts:
     weights: "400,400i,700,700i"
   - name: "Lora"
     weights: "400,400i,700,700i"
-google_analytics: ""
+google_analytics: "UA-2011187-2"
 disqus:
   shortname: "javamons-book"
 twitter:
-  username: "javamon1174"
+  username:
 google_site_verification:
 
 # Liquid
@@ -54,7 +54,7 @@ paginate: 5
 paginate_path: /page:num/
 
 # Search
-search_full_content: true
+search_full_content: false
 
 # Taxonomy pages
 category_archive_path: "/categories/#"
