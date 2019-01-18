@@ -22,7 +22,7 @@ title: "javamon"
 description: "dev book"
 baseurl: ""
 url: "https://javamon1174.github.io"
-logo: "/images/so-simple-site-logo.png"
+logo: "/images/oop.png"
 date_format: "%B %-d, %Y"
 read_time: true
 words_per_minute: # 200
@@ -106,19 +106,19 @@ defaults:
 
 # Site Author
 author:
-  name: Michael Rose
-  picture: /images/michael-rose-photo.jpg
-  email:
-  twitter: mmistakes
+  name: Javamon
+  picture: /images/oop-logo.png
+  email: javamon1174@gmail.com
+  twitter:
   links:
     - title: Twitter
-      url: https://twitter.com/mmistakes
+      url:
       icon: fab fa-twitter-square
     - title: Instagram
-      url: https://instagram.com/mmistakes
+      url:
       icon: fab fa-instagram
     - title: GitHub
-      url: https://github.com/mmistakes
+      url: https://github.com/javamon1174
       icon: fab fa-github-square
 
 # Footer Links
