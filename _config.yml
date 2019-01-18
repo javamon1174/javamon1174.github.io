@@ -116,13 +116,13 @@ author:
 # Footer Links
 footer_links:
   - title: Twitter
-    url: https://twitter.com/mmistakes
+    url:
     icon: fab fa-twitter-square
   - title: Instagram
-    url: https://instagram.com/mmistakes
+    url: https://instagram.com/javamon1174
     icon: fab fa-instagram
   - title: GitHub
-    url: https://github.com/mmistakes
+    url: https://github.com/javamon1174
     icon: fab fa-github-square
   - title: Feed
     url: atom.xml
