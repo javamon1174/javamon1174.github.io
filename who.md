@@ -25,9 +25,9 @@ layout: page
     * markup
     
 * 프레임워크
-    * Laravel(php)
-    * CodeIgniter(php)
-    * Django(python)
+    * Laravel
+    * CodeIgniter
+    * Django
     * Jquery
     * Jframe(php - 학습용으로 구현한 자체 프레임워크)
     
