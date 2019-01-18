@@ -2,4 +2,41 @@
 layout: page
 ---
 
-javamon!!!
+# Javamon
+
+## 뉴규?
+> 컴퓨터 동작원리에 호기심 많아서 개발하는 사람.
+
+## 프로그래밍이란?
+> 컴퓨터가 이해할 수 있는 코드는 어느 바보나 다 짤 수 있다. 좋은 프로그래머는 사람이 이해할 수 있는 코드를 짠다.
+ by 마틴 파울러, 리팩토링에서..
+
+> 컴퓨터가 다양한 문제를 해결위한 과정을 논리적으로 해결하는 과정.
+ by my brain
+ 
+## 경험한 또는 진행중인 기술 스택?
+* 언어
+    * c
+    * python
+    * php
+    * java
+    * javascript
+    * markup
+    
+* 프레임워크
+    * Laravel(php)
+    * CodeIgniter(php)
+    * Django(python)
+    * Jquery
+    * Jframe(php - 학습용으로 구현한 자체 프레임워크)
+    
+* 그외
+    * mysql 5.7~
+    * git
+    * Trello
+    * Slack
+    * Vagrant
+    * Docker(working)
+    
+   
+    
