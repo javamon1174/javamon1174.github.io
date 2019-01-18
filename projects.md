@@ -1,5 +1,5 @@
 ---
-title: Javamon's Side Projects
+title: Javamon's Projects
 layout: page
 ---
 
@@ -15,11 +15,12 @@ layout: page
 | [OverSearch](https://github.com/javamon1174/OverSearch) | Mar 2017 | 오버워치 전적 검색 앱 | php |
 | [Jkeep](https://github.com/javamon1174/Jkeep) | Mar 2017 | 라라벨 프레임워크를 이용한 메모앱 | php |
 
+<hr>
 
 ## Main Projects
 
 | Project name | date |                  Description                                 | language |
 |--------------|------|--------------------------------------------------------------|----------|
 | [cocoa-erp](#) | Oct 2017 | 사내 ERP 프로젝트 - 웹 애플리케이션 | php |
-| [필립몰](https://www.mall.philips.co.kr/) | Jan 2017 | 필립스몰 사이트 유지보수 | asp, php |
+| [필립스몰](https://www.mall.philips.co.kr/) | Jan 2017 | 필립스몰 사이트 유지보수 | asp, php |
 | [볼빅](http://volvik.co.kr/) | Jan 2017 | 볼빅 사이트 유지보수 | java |
