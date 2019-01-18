@@ -20,7 +20,9 @@ tags:
 그래서 약 30분의 시간을 소모하면서 vote() 뷰 함수를 제네릭 뷰로 바꾸고 테스트도 진행하니 잘 되었다!
 
 장고 공홈에는 폼 처리에 대해 사용자가 정의한 폼을 활용해서 다루는 방식만 있기 때문에 내가 원하는 작업에 대한 내용은 없었다.
+
 관련 내용 : https://docs.djangoproject.com/ko/2.1/intro/tutorial04/
+
 문제 :
 views.py 파일의 vote() 함수를 generic view(클래스형 뷰)로 대체
 
