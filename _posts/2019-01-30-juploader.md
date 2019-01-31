@@ -135,8 +135,6 @@ Tuesday=워크래프트<br>
 
 
 ## 원하는 설정값을 입력하고 프로그램을 작동하게 되면 아래 영상과 같이 실행됩니다.
-<iframe width="100%" height="auto" src="https://www.youtube.com/embed/VmS8NFwZ9XU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 {% include responsive-embed url="https://www.youtube.com/watch?v=VmS8NFwZ9XU" ratio="16:9" %}
 {% include responsive-embed url="https://www.youtube-nocookie.com/embed/VmS8NFwZ9XU" ratio="16:9" %}
 
