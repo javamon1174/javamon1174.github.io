@@ -141,6 +141,8 @@ Tuesday=워크래프트<br>
 
 {% include responsive-embed url="https://www.youtube.com/watch?v=-PVofD2A9t8" ratio="16:9" %}
 
+{% include responsive-embed url="https://www.youtube-nocookie.com/embed/l2Of1-d5E5o?controls=0&amp;" %}
+
 
 ### 2019-01-30 지원 웹하드 - 업데이트 포스팅에서 계속 추가 됩니다
  - 파일이즈
