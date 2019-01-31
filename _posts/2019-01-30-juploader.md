@@ -86,7 +86,7 @@ tags:
 > sample_webhard_all=filelon/filesun/fileis/dodofile/filemaru
 <p>해당 프로그램에서 지원하고 있는 웹하드 목록입니다.</p>
 <p>이 목록 아래의 다른 항목을 설정할때에 활용됩니다. 웹하드명이 잘못 기입될 경우 프로그램이 실행되지 않습니다.</p>
-<p>실제 버전의 목록과 다르게 빠진 목록이 존재 할 수 있습니다.</>
+<p>실제 버전의 목록과 다르게 빠진 목록이 존재 할 수 있습니다.</p>
 
 
 > comment=javamon1174@gmail.com
