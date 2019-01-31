@@ -1,5 +1,6 @@
 ---
 title: "[Juploader] 제이업로더 -웹하드 자동 업로드 프로그램"
+image: /images/main_frame.jpg
 excerpt: "제이업로더(웹하드 자동 업로드)"
 date: 2019-01-30
 categories:
@@ -57,6 +58,7 @@ tags:
 
 
 ### 다운로드 링크 : [juploader.exe](http://34.73.229.249/download/jloader)
+<img src="/images/main_frame.png" class="align-center" alt="">
 
 
 ### 사용법
@@ -135,11 +137,11 @@ Tuesday=워크래프트<br>
 해당 웹하드는 업로드를 진행하지 않습니다.</p>
 
 
-image: /images/main_frame.png
+## 원하는 설정값을 입력하고 프로그램을 작동하게 되면 아래 영상과 같이 실행됩니다.
+<div class="responsive-embed responsive-embed-16by9">
+  <iframe class="responsive-embed-item" src="https://www.youtube.com/watch?v=VmS8NFwZ9XU"></iframe>
+</div>
 
-<p>원하는 설정값을 입력하고 프로그램을 작동하게 되면 아래 영상과 같이 실행됩니다.</p>
-
-{% raw %}{% include responsive-embed url="https://www.youtube.com/watch?v=-VmS8NFwZ9XU" ratio="16:9" %}{% endraw %}
 
 ### 2019-01-30 지원 웹하드 - 업데이트 포스팅에서 계속 추가 됩니다
  - 파일이즈
