@@ -58,6 +58,11 @@ tags:
 
 ### 다운로드 링크 : [juploader.exe](http://34.73.229.249/download/jloader)
 
+### 사전 작업
+1. 사용하고 하는 각 웹하드 사이트에서 "수동 설치"를 통해 미리 업/다운로드 프로그램을 설치합니다.
+2. 업로드가 정상적으로 되는지 한번 수동으로 컨텐츠를 등록해주세요.
+3. 업로드 프로그램 하단에 "완료시 종료"의 항목을 체크해제 해주세요.(업로드 프로그램창이 계속 열려있게)
+
 ### 사용법
 <p>처음 프로그램을 실행하면 하단의 config(설정) 버튼을 클릭하여 프로그램 관련 설정을 지정합니다.</p>
 <p>각 설정값에 대해 설명입니다.</p>
@@ -136,7 +141,6 @@ Tuesday=워크래프트<br>
 
 ## 원하는 설정값을 입력하고 프로그램을 작동하게 되면 아래 영상과 같이 실행됩니다.
 {% include responsive-embed url="https://www.youtube.com/watch?v=VmS8NFwZ9XU" ratio="16:9" %}
-{% include responsive-embed url="https://www.youtube-nocookie.com/embed/VmS8NFwZ9XU" ratio="16:9" %}
 
 ### 2019-01-30 지원 웹하드 - 업데이트 포스팅에서 계속 추가 됩니다
  - 파일이즈
