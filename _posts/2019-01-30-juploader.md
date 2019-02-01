@@ -3,8 +3,7 @@ title: "[Juploader] 제이업로더 -웹하드 자동 업로드 프로그램"
 excerpt: "제이업로더(웹하드 자동 업로드)"
 date: 2019-01-30
 categories:
-  - life
-  - tech
+  - juploader
 tags:
   - 제이업로더
   - 자동
