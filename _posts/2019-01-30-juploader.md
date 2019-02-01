@@ -141,6 +141,10 @@ Tuesday=워크래프트<br>
 
 ## 원하는 설정값을 입력하고 프로그램을 작동하게 되면 아래 영상과 같이 실행됩니다.
 {% include responsive-embed url="https://www.youtube.com/watch?v=VmS8NFwZ9XU" ratio="16:9" %}
+{% raw %}{% include responsive-embed url="https://www.youtube.com/watch?v=VmS8NFwZ9XU" ratio="16:9" %}{% endraw %}
+<div class="responsive-embed responsive-embed-16by9">
+  <iframe class="responsive-embed-item" src="https://www.youtube.com/watch?v=VmS8NFwZ9XU"></iframe>
+</div>
 
 ### 2019-01-30 지원 웹하드 - 업데이트 포스팅에서 계속 추가 됩니다
  - 파일이즈
