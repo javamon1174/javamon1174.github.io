@@ -71,12 +71,12 @@ tags:
 <p>제이로더의 기본적인 동작을 제어하기 위한 설정 목록입니다.</p>
 
 
-> auto_login=user/password
+> auto_login= user/password
 <p>자동 로그인을 위한 jloader 아이디와 패스워드를 입력합니다.</p>
 <p>공백으로 두면 해당 설정값은 무시됩니다.</p>
 
 
-> path=C:/upload
+> path= C:/upload
 <p>해당 설정값은 지정한 폴더 위치를 저장해놓기 위함입니다.</p>
 <p>따로 설정하지 않고 프로그램 상에서 폴더를 지정하면 값이 자동적으로 입력됩니다.</p>
 
@@ -86,13 +86,17 @@ tags:
 <p>컨텐츠의 제목은 기본적으로 파일명으로 작성됩니다.</p>
 
 
-> sample_webhard_all=filelon/filesun/fileis/dodofile/filemaru
+> sample_webhard_all= filelon/filesun/fileis/dodofile/filemaru
 <p>해당 프로그램에서 지원하고 있는 웹하드 목록입니다.</p>
 <p>이 목록 아래의 다른 항목을 설정할때에 활용됩니다. 웹하드명이 잘못 기입될 경우 프로그램이 실행되지 않습니다.</p>
 <p>실제 버전의 목록과 다르게 빠진 목록이 존재 할 수 있습니다.</p>
 
 
-> comment=javamon1174@gmail.com
+> auto_upmove_start= N
+<p>자동로그인 이후 자동으로 상위등록 프로세스를 실행 할지에 대한 설정값입니다.</p>
+<p>Y 값으로 설정하게 되면 로그인 이후에 상위등록 아이템 사용 프로세스가 실행됩니다.</p>
+
+> comment= 'javamon1174@gmail.com'
 <p>개발자에게 문의하기 위한 메일주소가 있습니다.</p>
 <p>버그, 에러, 원격지원 등 다양한 문의를 해당 메일로 보내주시면 확인 후 피드백 드립니다.</p>
 <p>원격지원은 팀뷰어로 진행되며, 미리 설치 후 요청바랍니다.</p>
@@ -102,29 +106,29 @@ tags:
 <p>컨텐츠 상위 등록 아이템을 사용하기 위한 설정 목록입니다.</p>
 
 
-> use_upmove_webhard=filelon/filesun/fileis/filemaru/dodofile
+> use_upmove_webhard= filelon/filesun/fileis/filemaru/dodofile
 <p>상위 등록할 웹하드 목록을 입력하는 설정입니다.</p>
 
 
-> Monday=무한도전/스타크래프트<br>
-Tuesday=워크래프트<br>
+> Monday= 무한도전/스타크래프트<br>
+Tuesday= 워크래프트<br>
 이하 생략
 <p>월요일 부터 일요일까지 어떤 컨텐츠들을 상위 등록할지 목록을 작성합니다.</p>
 <p>요일별 상위등록 설정으로 판매전략을 수립하여 보다 큰 기대 수익을 창출할 수 있습니다.</p>
 
 
-> priority_pixel=720
+> priority_pixel= 720
 <p>상위 등록을 할 때에 우선순위가 되는 화질을 선택합니다.</p>
 <p>예를들어 AOA직캠.720p-poplil 파일과 AOA직캠.1080p-poplil
 이 등록 되어있을 때, 위에 설정한 픽셀값으로 720p의 파일만 상위등록을 하게 됩니다.</p>
 <p>같은 파일의 화질만 다를 경우 두 파일 모두 상위등록에 등록 시키고 싶을때에는</p>
 
 
-> Monday=AOA직캠.720p-poplil/AOA직캠.1080p-poplil
+> Monday= AOA직캠.720p-poplil/AOA직캠.1080p-poplil
 <p>위와 같이 파일명 풀네임으로 등록하면 화질만 다른 동일 파일 모두 상위 등록할 수 있습니다.</p>
 
 
-> sample_day_of_the_week=Monday/Tuesday/Wednesday/Thursday/Friday/Sunday
+> sample_day_of_the_week= Monday/Tuesday/Wednesday/Thursday/Friday/Sunday
 <p>철자가 틀리면 프로그램이 오류가 발생하기 때문에 해당 요일별 철자를 보관하기 위한 설정값입니다.</p>
 
 
@@ -132,7 +136,7 @@ Tuesday=워크래프트<br>
 <p>웹하드 계정을 설정하기 위한 설정 목록입니다.</p>
 
 
-> filelon=user/password
+> filelon= user/password
 <p>업로드 할 웹하드 사이트의 계정을 입력하면 해당 계정을 통해 업로드를 진행합니다.</p>
 <p>업로드 하지 않을 웹하드 사이트의 경우 공백이나 위와 같이 user/password의 값을 주면
 해당 웹하드는 업로드를 진행하지 않습니다.</p>
