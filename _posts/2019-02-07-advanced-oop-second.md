@@ -77,8 +77,9 @@ class Employee {
 ### 사용자 정의 데이터 타입(User-Defined Datatype) 역할의 클래스
 클래스는 사용자가 필요로 하는 새로운 데이터 타입을 정의하는 장치의 역할을 한다.<br/>
 
+
 ```
-기본 데이터 타입 : int, float, char, boolean<br/>
+기본 데이터 타입 : int, float, char, boolean
 사용자 정의 데이터 타입(클래스) : Customer, Car, Rental, Reservation
 ```
 
