@@ -1,7 +1,6 @@
 ---
 title: "[Advanced OOP] 네번째, 고급 객체지향 프로그래밍 정리"
 excerpt: "(4)고급 객체지향 프로그래밍 용어 정리"
-image: /images/interface.png
 date: 2019-02-11
 categories:
   - oop
@@ -43,15 +42,12 @@ tags:
 
 #### 기능 공통성 수준과 인터페이스
 
-```yaml
-image: /images/interface.png
-```
+![interface](/images/interface.png){: .align-center}
 
 #### 인터페이스를 포함한 상속구조 예제
 
-```yaml
-image: /images/interface-structure.png
-```
+![structure](/images/interface-structure.png){: .align-center}
+
     - '수업보조' 클래스는 '조교'의 서브클래스이지만, '임시'라는 인터페이스를 구현하여 일시적으로 임금을 받는 대학원생을 나타낸다.
     - '방문수업' 클래스는 '교수'의 서브클래스이지만, '임시'라는 인터페이스를 통해 일시적으로 학교에 고용된 교수를 나타낸다.
     - '수업보조'와 '방문수업' 클래스들을 이용하여 임금을 지불하는 기능을 구현하려고 할 때, computeTotalPay()에 대한 
