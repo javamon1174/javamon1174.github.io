@@ -47,7 +47,7 @@ tags:
 
 
 #### 제이업로더 폴더 선택창에서 uploader > DCU 폴더를 지정하여 줍니다.
-![select](/images/jloader/select_2.png){: .align-center}
+![select](/images/jloader/select.png){: .align-center}
 
 
 #### 아래의 이미지는 DCU 폴더의 내용입니다.
