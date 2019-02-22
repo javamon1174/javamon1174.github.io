@@ -69,7 +69,7 @@ tags:
 아래를 보시면 뉴스룸.190127 의 파일은 썸네일이 존재하며, 파일명과 이미지명이 같고 확장자만 다른 모습입니다.<br/>
 프로그램에서 지정한 폴더에서는 이런식으로 사용 가능합니다.<br/>
 
-![interface](/images/jloader/dcu_2.png){: .align-center}
+![interface](/images/jloader/test_1.png){: .align-center}
 
 
 아래의 사진은 지정한 test 폴더 하위의 "뉴스룸 모음 1" 폴더입니다.<br/>
