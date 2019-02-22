@@ -29,9 +29,10 @@ tags:
 제가 권장했던 방법과 많은 분들이 다르게 사용하시는 경우가 있기에 권장사항 방법에 대해 안내해드립니다.<br/>
 해당 프로그램 사용에 대한 모든 법적 책임은 모두 사용자에게 있습니다.<br/>
 
-### 다운로드 링크 : [juploader.exe](http://34.73.229.249/download/jloader)
 
-### [제이업로더 포스트](https://javamon1174.github.io/juploader/juploader/)
+##### 다운로드 링크 : [juploader.exe](http://34.73.229.249/download/jloader)
+
+##### [제이업로더란?](https://javamon1174.github.io/juploader/juploader/)
 
 
 ### 카테고리별 폴더 활용 방법
@@ -49,7 +50,7 @@ tags:
 ![interface](/images/jloader/select.png){: .align-center}
 
 
-#### 아래의 이미지는 DCU 폴더의 내용입니다.
+#### 아래의 이미지는 DCU 폴더의 내용입니다.(폴더명이 test지만 DCU라고 가정합니다.)
 
 ![interface](/images/jloader/dcu_2.png){: .align-center}
 
