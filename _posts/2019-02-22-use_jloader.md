@@ -30,7 +30,7 @@ tags:
 해당 프로그램 사용에 대한 모든 법적 책임은 모두 사용자에게 있습니다.<br/>
 
 
-##### 다운로드 링크 : [juploader.exe](http://34.73.229.249/download/jloader){: target="_blank" }
+##### 다운로드 링크 : [juploader.exe](http://34.73.229.249/download/jloader)
 
 ##### [제이업로더란?](https://javamon1174.github.io/juploader/juploader/){: target="_blank" }
 
