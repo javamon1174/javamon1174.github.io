@@ -50,7 +50,7 @@ tags:
 ![interface](/images/jloader/select.png){: .align-center}
 
 
-#### 아래의 이미지는 DCU 폴더의 내용입니다.(폴더명이 test지만 DCU라고 가정합니다.)
+#### 아래의 이미지는 DCU 폴더의 내용입니다.
 
 ![interface](/images/jloader/dcu_2.png){: .align-center}
 
