@@ -167,7 +167,7 @@ Tuesday= 워크래프트<br>
     
 > 이미지 파일명에 원래의 파일의 확장자 exe, mp4, mkv 등 포함되도 되지만 확장자 없이 위 처럼 사용하는 방법을 권장합니다.
 
-### (추가 포스트) [제이업로더 활용법](https://javamon1174.github.io/juploader/use_jloader/)
+### (추가 내용) [제이업로더 활용법 포스트](https://javamon1174.github.io/juploader/use_jloader/){: target="_blank" }
 
 ## 원하는 설정값을 입력하고 프로그램을 작동하게 되면 아래 영상과 같이 실행됩니다.
 {% include responsive-embed url="https://www.youtube.com/embed/VmS8NFwZ9XU?controls=1&disablekb=0fs=1" ratio="16:9" %}
