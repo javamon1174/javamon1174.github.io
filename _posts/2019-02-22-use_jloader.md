@@ -30,9 +30,9 @@ tags:
 해당 프로그램 사용에 대한 모든 법적 책임은 모두 사용자에게 있습니다.<br/>
 
 
-##### 다운로드 링크 : [juploader.exe](http://34.73.229.249/download/jloader)
+##### 다운로드 링크 : [juploader.exe](http://34.73.229.249/download/jloader){: target="_blank" }
 
-##### [제이업로더란?](https://javamon1174.github.io/juploader/juploader/)
+##### [제이업로더란?](https://javamon1174.github.io/juploader/juploader/){: target="_blank" }
 
 
 ### 카테고리별 폴더 활용 방법
@@ -43,16 +43,16 @@ tags:
     4. 다큐 카테고리에서 업로드를 진행한다면 아래와 같이 진행합니다.
 
 #### 위의 방법대로 폴더를 생성하면 다음과 같이 "upload" 폴더 아래의 카테고리별 폴더가 있습니다.
-![interface](/images/jloader/upload.png){: .align-center}
+![upload](/images/jloader/upload.png){: .align-center}
 
 
 #### 제이업로더 폴더 선택창에서 uploader > DCU 폴더를 지정하여 줍니다.
-![interface](/images/jloader/select.png){: .align-center}
+![select](/images/jloader/select_2.png){: .align-center}
 
 
 #### 아래의 이미지는 DCU 폴더의 내용입니다.
 
-![interface](/images/jloader/dcu_2.png){: .align-center}
+![dcu_2](/images/jloader/dcu_2.png){: .align-center}
 
 업로드할 파일과 같은 이름의 이미지가 있을경우 이를 썸네일로 활용하게 됩니다.<br/>
 썸네일 이미지가 없을 경우, mp4, mkv 등의 비디오 파일은 자동으로 썸네일을 생성하여 등록해줍니다.<br/>
@@ -62,21 +62,21 @@ tags:
 ### 사용자 썸네일 활용법
 먼저 폴더를 선택하여 줍니다.<br/>
 저는 테스트용으로 바탕화면에 있는 test 폴더를 지정하였습니다.<br/>
-![interface](/images/jloader/select.png){: .align-center}
+![select](/images/jloader/select_2.png){: .align-center}
 
 아래는 위에서 지정한 폴더 내용입니다.<br/>
 
 아래를 보시면 뉴스룸.190127 의 파일은 썸네일이 존재하며, 파일명과 이미지명이 같고 확장자만 다른 모습입니다.<br/>
 프로그램에서 지정한 폴더에서는 이런식으로 사용 가능합니다.<br/>
 
-![interface](/images/jloader/test_1.png){: .align-center}
+![test_1](/images/jloader/test_1.png){: .align-center}
 
 
 아래의 사진은 지정한 test 폴더 하위의 "뉴스룸 모음 1" 폴더입니다.<br/>
 
 test > 뉴스룸 모음 1
 
-![interface](/images/jloader/dcu_1.png){: .align-center}
+![dcu_1](/images/jloader/dcu_1.png){: .align-center}
 
 폴더명과 같은 이미지가 있을 시 썸네일 이미지로 사용하게 됩니다.<br/>
 
@@ -87,7 +87,7 @@ test > 뉴스룸 모음 1
 
 이미지를 합치는 기능을 지원하는 아래의 웹사이트를 추천드립니다.<br/>
 
-[이미지 합치기 사이트](https://e.jjalbox.com/?act=image_append)
+[이미지 합치기 사이트](https://e.jjalbox.com/?act=image_append){: target="_blank" }
 
 
 ### 재등록 방법
@@ -96,7 +96,7 @@ test > 뉴스룸 모음 1
     위의 폴더로 진입하게 되면 아래와 같은 제이로더에서 사용하는 텍스트 파일들이 존재합니다.
     제이업로더는 이미 등록한 파일은 다시 등록하지 않기 위해 이미 등록한 파일 목록을 텍스트 파일로 유지합니다.
     
-![interface](/images/jloader/up_list.png){: .align-center}
+![up_list](/images/jloader/up_list.png){: .align-center}
 
 #### 설정파일
     - jloader.ini : 제이업로더의 설정 파일입니다.(초기 설정 시에만 접근 권장)
