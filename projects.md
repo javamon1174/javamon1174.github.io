@@ -7,7 +7,9 @@ layout: page
 
 | Project name | date |                  Description                                 | language | github | PPT |
 |--------------|------|--------------------------------------------------------------|----------|----------|----------|
-| web_blog(django) | doing | 블로그 서비스에 대한 호기심과 파이썬 이해도를 높이기 위한 웹앱 | python | [public](https://github.com/javamon1174/web-django-blog){: target="_blank" } | None |
+| mytube_web | Feb 2020 | Django 기반 유튜브 구독자 관리 및 댓글 랜덤 추천 등 무료 웹서비스 | python | [private](#){: target="_blank" } | [link](https://mytube.shop/){: target="_blank" } |
+| oh_my_bot | Aug 2019 | 가격 정보 기반 해외선물, 주식, 암호화폐 등 트레이딩 프로젝트 | python | [private](#){: target="_blank" } | None |
+| web_blog(django) | Mar 2019 | 블로그 서비스에 대한 호기심과 파이썬 이해도를 높이기 위한 웹앱 | python | [public](https://github.com/javamon1174/web-django-blog){: target="_blank" } | None |
 | javamon1174.github.io | Jan 2019 | 타 블로그 서비스를 안쓰려고 만든 github.io 블로그 | ruby | [public](https://github.com/javamon1174/javamon1174.github.io){: target="_blank" } | None |
 | jloader_admin(django) | Nov 2018 | Jloader 관리자 웹 어플리케이션 | python | [private](#){: target="_blank" } | [link](https://javamon1174.github.io/pdf/jloader.pdf){: target="_blank" } |
 | jloader | Nov 2018 | 크롤링과 OLE 객체를 통해 파일 업/다운로드하는 윈도우 프로그램 | python | [private](#){: target="_blank" } | [link](https://javamon1174.github.io/pdf/jloader.pdf){: target="_blank" } |
