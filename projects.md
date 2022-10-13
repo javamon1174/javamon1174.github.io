@@ -13,9 +13,7 @@ layout: page
 | [필립스몰](https://www.mall.philips.co.kr/) | Jan 2017 | 필립스몰 사이트 유지보수 | asp, php | [public(mall_curl)](https://github.com/javamon1174/SaleConfirm_renew){: target="_blank" } | [link](https://javamon1174.github.io/pdf/mall_curl.pdf){: target="_blank" } |
 | [볼빅](http://volvik.co.kr/) | Jan 2017 | 볼빅 사이트 유지보수 | java | None | None |
 
-<br>
 <hr>
-<br>
 
 ## Side Projects
 
