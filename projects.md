@@ -7,8 +7,8 @@ layout: page
 
 | Project name | date |                  Description                                 | language | github | PPT |
 |--------------|------|--------------------------------------------------------------|----------|----------|----------|
-| [큰사람커넥트 ATC+](#) | Nov 2021 | 정부연구과제 ATC+ 음성 주문 키오스크 | python | [private](https://youtu.be/BLCbWx5jT0c){: target="_blank" } | [link](https://javamon1174.github.io/pdf/jsheet.pdf](https://docs.google.com/presentation/d/18As-kPJc0MrWITcfFI9YTKueC0t1JeoQ7XE6oIo-VDA/edit?usp=sharing){: target="_blank" } |
-| [큰사람커넥트 ATC+](#) | Nov 2021 | 정부연구과제 ATC+ 상담보조시스템 | php | [private](#){: target="_blank" } | [link](https://docs.google.com/presentation/d/18As-kPJc0MrWITcfFI9YTKueC0t1JeoQ7XE6oIo-VDA/edit?usp=sharing){: target="_blank" } |
+| 큰사람커넥트 ATC+ | Oct 2022 | 정부연구과제 ATC+ 음성 주문 키오스크 | python | [시연](https://youtu.be/BLCbWx5jT0c){: target="_blank" } | [link](https://docs.google.com/presentation/d/18As-kPJc0MrWITcfFI9YTKueC0t1JeoQ7XE6oIo-VDA/edit?usp=sharing){: target="_blank" } |
+| 큰사람커넥트 ATC+ | Nov 2021 | 정부연구과제 ATC+ 상담보조시스템 | php | [private](#){: target="_blank" } | [link](https://docs.google.com/presentation/d/18As-kPJc0MrWITcfFI9YTKueC0t1JeoQ7XE6oIo-VDA/edit?usp=sharing){: target="_blank" } |
 | [cocoa-erp](#) | Oct 2017 | 사내 ERP 프로젝트 - 웹 애플리케이션 | php | [public(jsheet)](https://github.com/javamon1174/new_jsheet){: target="_blank" } | [link](https://javamon1174.github.io/pdf/jsheet.pdf){: target="_blank" } |
 | [필립스몰](https://www.mall.philips.co.kr/) | Jan 2017 | 필립스몰 사이트 유지보수 | asp, php | [public(mall_curl)](https://github.com/javamon1174/SaleConfirm_renew){: target="_blank" } | [link](https://javamon1174.github.io/pdf/mall_curl.pdf){: target="_blank" } |
 | [볼빅](http://volvik.co.kr/) | Jan 2017 | 볼빅 사이트 유지보수 | java | None | None |
