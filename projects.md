@@ -3,6 +3,20 @@ title: Javamon's Projects
 layout: page
 ---
 
+## Main Projects
+
+| Project name | date |                  Description                                 | language | github | PPT |
+|--------------|------|--------------------------------------------------------------|----------|----------|----------|
+| [큰사람커넥트 ATC+](#) | Nov 2021 | 정부연구과제 ATC+ 음성 주문 키오스크 | python | [private](https://youtu.be/BLCbWx5jT0c){: target="_blank" } | [link](https://javamon1174.github.io/pdf/jsheet.pdf](https://docs.google.com/presentation/d/18As-kPJc0MrWITcfFI9YTKueC0t1JeoQ7XE6oIo-VDA/edit?usp=sharing){: target="_blank" } |
+| [큰사람커넥트 ATC+](#) | Nov 2021 | 정부연구과제 ATC+ 상담보조시스템 | php | [private](#){: target="_blank" } | [link](https://docs.google.com/presentation/d/18As-kPJc0MrWITcfFI9YTKueC0t1JeoQ7XE6oIo-VDA/edit?usp=sharing){: target="_blank" } |
+| [cocoa-erp](#) | Oct 2017 | 사내 ERP 프로젝트 - 웹 애플리케이션 | php | [public(jsheet)](https://github.com/javamon1174/new_jsheet){: target="_blank" } | [link](https://javamon1174.github.io/pdf/jsheet.pdf){: target="_blank" } |
+| [필립스몰](https://www.mall.philips.co.kr/) | Jan 2017 | 필립스몰 사이트 유지보수 | asp, php | [public(mall_curl)](https://github.com/javamon1174/SaleConfirm_renew){: target="_blank" } | [link](https://javamon1174.github.io/pdf/mall_curl.pdf){: target="_blank" } |
+| [볼빅](http://volvik.co.kr/) | Jan 2017 | 볼빅 사이트 유지보수 | java | None | None |
+
+<br>
+<hr>
+<br>
+
 ## Side Projects
 
 | Project name | date |                  Description                                 | language | github | PPT |
@@ -17,15 +31,3 @@ layout: page
 | Jframe | May 2017 | 프레임 워크 내부적으로 작동원리 학습 목적 | php | [public](https://github.com/javamon1174/jframe){: target="_blank" } | [link](https://javamon1174.github.io/pdf/jframe.pdf){: target="_blank" } |
 | OverSearch | Mar 2017 | 오버워치 전적 검색 앱 | php | [public](https://github.com/javamon1174/OverSearch){: target="_blank" } | [link](https://javamon1174.github.io/pdf/oversearch.pdf){: target="_blank" } |
 | Jkeep | Mar 2017 | 라라벨 프레임워크를 이용한 메모앱 | php | [public](https://github.com/javamon1174/Jkeep){: target="_blank" } | [link](https://javamon1174.github.io/pdf/jkeep.pdf){: target="_blank" } |
-
-<br>
-<hr>
-<br>
-
-## Main Projects
-
-| Project name | date |                  Description                                 | language | github | PPT |
-|--------------|------|--------------------------------------------------------------|----------|----------|----------|
-| [cocoa-erp](#) | Oct 2017 | 사내 ERP 프로젝트 - 웹 애플리케이션 | php | [public(jsheet)](https://github.com/javamon1174/new_jsheet){: target="_blank" } | [link](https://javamon1174.github.io/pdf/jsheet.pdf){: target="_blank" } |
-| [필립스몰](https://www.mall.philips.co.kr/) | Jan 2017 | 필립스몰 사이트 유지보수 | asp, php | [public(mall_curl)](https://github.com/javamon1174/SaleConfirm_renew){: target="_blank" } | [link](https://javamon1174.github.io/pdf/mall_curl.pdf){: target="_blank" } |
-| [볼빅](http://volvik.co.kr/) | Jan 2017 | 볼빅 사이트 유지보수 | java | None | None |
