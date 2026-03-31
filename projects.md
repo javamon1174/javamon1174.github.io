@@ -7,9 +7,7 @@ layout: page
 
 | Project name | date |                  Description                                 | language | github | PPT |
 |--------------|------|--------------------------------------------------------------|----------|----------|----------|
-| [브이힐즈(VHILLS)](https://vhills.co.kr/){: target="_blank" } | 2023.05 ~ | 전 생애 자산정보 관리 앱 서비스 - React Native 웹뷰 기반, 푸시알림, 인앱 구독 (PM/백엔드) | React Native, Node.js, Python
-
- | Node.js, Python | private | None |
+| [브이힐즈(VHILLS)](https://vhills.co.kr/){: target="_blank" } | 2023.05 ~ | 전 생애 자산정보 관리 앱 서비스 - React Native 웹뷰 기반, 푸시알림, 인앱 구독 (PM/백엔드) | React Native, Node.js, Python | Node.js, Python | private | None |
 | [시노서울(SinoSeoul)](https://sinoseoul.slowspace.io/dashboard/welcome){: target="_blank" } | 2023.05 ~ | 중국 의료기기 수출 컨설팅 웹 서비스 | Node.js, PHP | private | None |
 | 서울라인(SeoulLine) | 2024 | AIS 선박자동식별장치 신호 기반 유류선박 추적 시스템 웹 툴 | Node.js | private | None |
 | 큰사람커넥트 ATC+ | Oct 2022 | 정부연구과제 ATC+ 음성 주문 키오스크 | python | [시연](https://youtu.be/BLCbWx5jT0c){: target="_blank" } | [link](https://docs.google.com/presentation/d/18As-kPJc0MrWITcfFI9YTKueC0t1JeoQ7XE6oIo-VDA/edit?usp=sharing){: target="_blank" } |
