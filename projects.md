@@ -7,6 +7,9 @@ layout: page
 
 | Project name | date |                  Description                                 | language | github | PPT |
 |--------------|------|--------------------------------------------------------------|----------|----------|----------|
+| [브이힐즈(VHILLS)](https://vhills.co.kr/){: target="_blank" } | 2023.05 ~ | 전 생애 자산정보 관리 앱 서비스 (PM/백엔드) - iOS, Android, Web 멀티 플랫폼 | Node.js, Python | private | None |
+| [시노서울(SinoSeoul)](https://sinoseoul.slowspace.io/dashboard/welcome){: target="_blank" } | 2023.05 ~ | 중국 의료기기 수출 컨설팅 웹 서비스 | Node.js, PHP | private | None |
+| 서울라인(SeoulLine) | 2024 | AIS 선박자동식별장치 신호 기반 유류선박 추적 시스템 웹 툴 | Node.js | private | None |
 | 큰사람커넥트 ATC+ | Oct 2022 | 정부연구과제 ATC+ 음성 주문 키오스크 | python | [시연](https://youtu.be/BLCbWx5jT0c){: target="_blank" } | [link](https://docs.google.com/presentation/d/18As-kPJc0MrWITcfFI9YTKueC0t1JeoQ7XE6oIo-VDA/edit?usp=sharing){: target="_blank" } |
 | 큰사람커넥트 ATC+ | Nov 2021 | 정부연구과제 ATC+ 상담보조시스템 | php | [private](#){: target="_blank" } | [link](https://docs.google.com/presentation/d/18As-kPJc0MrWITcfFI9YTKueC0t1JeoQ7XE6oIo-VDA/edit?usp=sharing){: target="_blank" } |
 | [cocoa-erp](#) | Oct 2017 | 사내 ERP 프로젝트 - 웹 애플리케이션 | php | [public(jsheet)](https://github.com/javamon1174/new_jsheet){: target="_blank" } | [link](https://javamon1174.github.io/pdf/jsheet.pdf){: target="_blank" } |
