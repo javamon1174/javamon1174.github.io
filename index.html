@@ -221,6 +221,33 @@
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+  /* PRINT / PDF */
+  @media print{
+    :root{--bg:#fff;--bg-soft:#f4f4f7;--bg-card:#fff;--border:#d8d8e0;--fg:#16161a;--fg-soft:#44444e;--fg-mute:#77777f;--accent:#4b45c6;--accent-soft:#eeeefb;--accent-fg:#fff;--shadow:none;--shadow-lg:none}
+    @page{margin:12mm}
+    body{background:#fff}
+    header.nav{display:none}
+    .toggle{display:none}
+    .hero{padding:10px 0 24px}
+    .hero:before{display:none}
+    section{padding:22px 0;break-inside:avoid}
+    .reveal{opacity:1!important;transform:none!important}
+    .proj,.sproj,.auto-card,.skill-group,.exp-item,.contact{break-inside:avoid}
+    .proj:hover,.sproj:hover{transform:none}
+    /* galleries: show all images wrapped */
+    .gallery,.gallery.sm{overflow:visible!important;flex-wrap:wrap;gap:8px}
+    .gallery img{height:150px!important;break-inside:avoid}
+    .gallery.sm img{height:150px!important}
+    /* timeline fits page width */
+    .tl-wrap{overflow:visible!important}
+    .tl{min-width:0!important}
+    .tl-fade,.tl-swipe{display:none!important}
+    .tl-bar .tip{display:none!important}
+    .plink,.btn{border:1px solid var(--border)}
+    a{color:var(--accent)}
+    .contact{background:#f4f4f7}
+  }
 </style>
 </head>
 <body>
@@ -263,7 +290,7 @@
   <p class="eyebrow reveal">Career &amp; Projects</p>
   <h2 class="title reveal">한눈에 보는 경력 &amp; 프로젝트 타임라인</h2>
   <p class="sub reveal">2016년 첫 실무부터 지금까지 — 재직 이력과 직접 만든 프로젝트를 한 줄에 담았습니다. 막대에 마우스를 올리면(모바일은 탭) 기술 스펙이 나타납니다.</p>
-  <div class="tl-total reveal"><b>회사 경력 6년 9개월</b><span>2016 → 현재 · 4개 기업 재직 · 출시 앱 3종 · 서비스 다수 운영</span></div>
+  <div class="tl-total reveal"><b>회사 경력 6년 5개월</b><span>2016 – 2026 · 4개 기업 재직 · 출시 앱 3종 · 개인 서비스 운영 중</span></div>
   <div class="tl-scroller">
     <div class="tl-wrap"><div class="tl" id="tl"></div></div>
     <div class="tl-fade l"></div><div class="tl-fade r"></div>
@@ -388,7 +415,7 @@
   <h2 class="title reveal">경력</h2>
   <div class="exp">
     <div class="exp-item reveal">
-      <div class="when">2023.05 — 현재</div>
+      <div class="when">2023.05 — 2026.05</div>
       <h4>(주)윅슨어소시에이츠 · 개발팀 대리</h4>
       <div class="where">IT 솔루션 개발 및 컨설팅</div>
       <ul>
@@ -527,14 +554,14 @@
     {n:'프리윌커뮤니케이션',s:2016.00,e:2017.13,w:'2016.01 – 2017.02 · 개발팀',sp:'필립스 임직원몰·후기 게시판·볼빅 웹, 크롤링 배치 자동화 · PHP · jQuery'},
     {n:'코코아비전',s:2017.25,e:2017.83,w:'2017.04 – 2017.10 · R&D 개발팀',sp:'사내 ERP, 웹 엑셀(CGLIST) · PHP CodeIgniter · jQuery'},
     {n:'큰사람커넥트 연구소',s:2021.30,e:2022.83,w:'2021.04 – 2022.10 · 연구원(대리)',sp:'음성 AI R&D · STT 주문 키오스크·상담보조·IoT 관제 · Python Flask·WebSocket'},
-    {n:'윅슨어소시에이츠',s:2023.42,e:2026.83,on:1,w:'2023.05 – 현재 · 개발팀 대리',sp:'브이힐즈 PM · 시노서울 ERP · 서울라인 AIS · React Native · Python Flask · PostgreSQL'}
+    {n:'윅슨어소시에이츠',s:2023.42,e:2026.42,w:'2023.05 – 2026.05 · 개발팀 대리',sp:'브이힐즈 PM · 시노서울 ERP · 서울라인 AIS · React Native · Python Flask · PostgreSQL'}
   ];
   var PROJ=[
     {n:'제이로더',s:2018.83,e:2019.17,row:0,w:'2018.11 – 2019.02 · 단독',sp:'PyQt5 데스크톱 앱 · 토렌트 파일 업/다운·분류 · 멀티스레딩'},
     {n:'트레이딩 봇',s:2019.25,e:2019.92,row:0,w:'2019.03 – 2019.11 · 단독',sp:'Python 퀀트 트레이딩·백테스팅 · TA-Lib · APScheduler'},
     {n:'마이튜브',s:2020.00,e:2020.25,row:0,w:'2020.01 – 2020.02 · 단독',sp:'Django · YouTube Data API · 구독 관리·댓글 추첨'},
     {n:'음성 키오스크 (ATC+)',s:2021.85,e:2022.83,row:0,w:'2021.11 – 2022.10 · 큰사람커넥트',sp:'STT·개체명 인식·전이학습 툴 · Flask·WebSocket·Electron'},
-    {n:'브이힐즈 (VHILLS)',s:2023.83,e:2026.83,row:0,on:1,w:'2023.10 – 현재 · 윅슨 · PM 총괄',sp:'RN·Flask·MariaDB · AES-256 암호화 · ChatGPT·미디어 생성 API · iOS/AOS/Web 출시'},
+    {n:'브이힐즈 (VHILLS)',s:2023.83,e:2026.42,row:0,w:'2023.10 – 2026.05 · 윅슨 · PM 총괄',sp:'RN·Flask·MariaDB · AES-256 암호화 · ChatGPT·미디어 생성 API · iOS/AOS/Web 출시'},
     {n:'애니밀리',s:2024.00,e:2026.83,row:1,on:1,w:'개인 프로젝트 · 출시중',sp:'React Native·Firebase·Flask · 반려동물 행동교정·AI 상태분석 · iOS/AOS 출시'},
     {n:'뚜띠 캠프',s:2025.30,e:2026.83,row:2,on:1,w:'개인 프로젝트 · 운영중',sp:'반려동물 채널 · 롱폼 직접 촬영·편집 + 숏폼(YouTube·Instagram) 자동 발행 · Claude Code CLI'},
     {n:'독캠핑',s:2026.50,e:2026.83,row:3,on:1,w:'개인 프로젝트 · 출시중',sp:'React Native·Flask·RAG AI · 반려견 캠핑 정보·AI 상담 · iOS/AOS 출시'}
