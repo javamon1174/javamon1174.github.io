@@ -150,6 +150,16 @@
   .side .chip{background:var(--bg-soft);border:1px solid var(--border);border-radius:12px;padding:12px 15px;font-size:13.5px}
   .side .chip b{font-weight:800}
   .side .chip span{color:var(--fg-mute)}
+  .sproj-grid{display:grid;gap:18px;margin-top:14px}
+  .sproj{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px;box-shadow:var(--shadow);transition:.25s}
+  .sproj:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+  .sproj-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+  .sproj-head h4{margin:0;font-size:19px;font-weight:800;letter-spacing:-.02em}
+  .sproj-head .en{color:var(--fg-mute);font-weight:600;font-size:13.5px}
+  .sproj-head .yr{margin-left:auto;font-size:12.5px;color:var(--accent);font-weight:700}
+  .sproj p.d{color:var(--fg-soft);font-size:14.5px;margin:0 0 14px}
+  .gallery.sm img{height:230px}
+  @media(max-width:680px){.gallery.sm img{height:180px}}
 
   /* CONTACT */
   .contact{background:var(--bg-soft);border-radius:26px;padding:56px 30px;text-align:center;border:1px solid var(--border)}
@@ -158,6 +168,36 @@
   .contact .cta{justify-content:center}
   footer{border-top:1px solid var(--border);padding:34px 0;color:var(--fg-mute);font-size:13px}
   .foot-in{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+
+  /* TIMELINE */
+  .tl-total{display:inline-flex;flex-direction:column;gap:2px;background:var(--accent-soft);
+    border:1px solid color-mix(in srgb,var(--accent) 34%,transparent);border-radius:14px;padding:12px 18px;margin:0 0 26px}
+  .tl-total b{font-size:20px;font-weight:850;color:var(--accent);letter-spacing:-.02em}
+  .tl-total span{font-size:13px;color:var(--fg-soft);font-weight:600}
+  .tl-wrap{overflow-x:auto;padding-bottom:12px}
+  .tl{position:relative;min-width:940px;padding-top:6px}
+  .tl-axis{position:relative;height:24px;margin-bottom:10px;border-bottom:1px solid var(--border)}
+  .tl-tick{position:absolute;top:2px;transform:translateX(-50%);font-size:11.5px;color:var(--fg-mute);font-weight:600}
+  .tl-tick:after{content:"";position:absolute;left:50%;top:18px;width:1px;height:7px;background:var(--border)}
+  .tl-lane{font-size:11.5px;font-weight:800;color:var(--accent);letter-spacing:.05em;margin:10px 0 7px;text-transform:uppercase}
+  .tl-row{position:relative;height:32px;margin-bottom:7px}
+  .tl-bar{position:absolute;height:30px;border-radius:9px;display:flex;align-items:center;padding:0 11px;
+    font-size:12.5px;font-weight:700;white-space:nowrap;overflow:visible;min-width:38px;
+    border:1px solid var(--border);cursor:default;transition:transform .14s,box-shadow .14s}
+  .tl-bar>.lbl{overflow:hidden;text-overflow:ellipsis}
+  .tl-bar:hover,.tl-bar:focus{outline:none;transform:translateY(-1px);box-shadow:var(--shadow);z-index:8}
+  .tl-bar.co{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+  .tl-bar.pj{background:var(--bg-soft);color:var(--fg)}
+  .tl-bar.on{border-style:dashed}
+  .tl-bar .tip{position:absolute;bottom:calc(100% + 10px);left:0;width:250px;background:var(--bg-card);
+    border:1px solid var(--border);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow-lg);
+    opacity:0;visibility:hidden;transform:translateY(6px);transition:.16s;z-index:30;white-space:normal;pointer-events:none}
+  .tl-bar .tip.r{left:auto;right:0}
+  .tl-bar:hover .tip,.tl-bar:focus .tip{opacity:1;visibility:visible;transform:none}
+  .tl-bar .tip b{display:block;font-size:13.5px;font-weight:800;margin-bottom:2px;color:var(--fg)}
+  .tl-bar .tip .wh{font-size:11.5px;color:var(--accent);font-weight:700;margin-bottom:5px}
+  .tl-bar .tip .sp{font-size:12.5px;color:var(--fg-soft);font-weight:500;line-height:1.5}
+  .tl-hint{font-size:12.5px;color:var(--fg-mute);margin-top:10px}
 
   /* LIGHTBOX */
   .lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
@@ -177,6 +217,7 @@
   <div class="nav-in">
     <a href="#top" class="brand">유상준<span>.</span>dev</a>
     <nav class="nav-links">
+      <a href="#timeline">타임라인</a>
       <a href="#projects">프로젝트</a>
       <a href="#automation">자동화</a>
       <a href="#skills">스킬</a>
@@ -204,6 +245,17 @@
     <div class="stat"><b>End-to-End</b><span>기획·개발·운영 전 과정</span></div>
     <div class="stat"><b>AI 자동화</b><span>무인 멀티서비스 운영</span></div>
   </div>
+</section>
+
+<section id="timeline" class="wrap">
+  <p class="eyebrow reveal">Career &amp; Projects</p>
+  <h2 class="title reveal">한눈에 보는 경력 &amp; 프로젝트 타임라인</h2>
+  <p class="sub reveal">2016년 첫 실무부터 지금까지 — 재직 이력과 직접 만든 프로젝트를 한 줄에 담았습니다. 막대에 마우스를 올리면(모바일은 탭) 기술 스펙이 나타납니다.</p>
+  <div class="tl-total reveal"><b>회사 경력 6년 9개월</b><span>2016 → 현재 · 4개 기업 재직 · 출시 앱 3종 · 서비스 다수 운영</span></div>
+  <div class="tl-wrap">
+    <div class="tl" id="tl"></div>
+  </div>
+  <p class="tl-hint reveal">■ 진한 막대 = 재직 · 옅은 막대 = 프로젝트 · 점선 테두리 = 현재 진행 중 · 개인 프로젝트 일부 시점은 근사치입니다.</p>
 </section>
 
 <section id="projects" class="wrap">
@@ -251,13 +303,12 @@
       <div class="badges"><span class="badge live">출시중</span><span class="badge">개인 프로젝트</span><span class="badge">RAG AI</span></div>
     </div>
     <p class="one">반려견과 함께 떠나는 캠핑, 장소 찾기부터 AI 상담까지</p>
-    <p class="desc">전국 반려견 동반 캠핑장을 지도와 목록을 오가며 탐색하고, RAG 기반 AI 상담으로 궁금한 점을 바로 물어볼 수 있는 서비스입니다. 캠핑장 데이터는 정기적으로 자동 갱신되며, 웹 서비스와 React Native 앱으로 함께 제공합니다.</p>
+    <p class="desc">전국 반려견 동반 캠핑장을 지도와 목록을 오가며 탐색하고, RAG 기반 AI 상담으로 궁금한 점을 바로 물어볼 수 있는 React Native 앱 서비스입니다. 캠핑장 데이터는 정기적으로 자동 갱신되며, iOS·Android 양쪽에 출시했습니다.</p>
     <div class="tags"><span class="tag">Python · Flask</span><span class="tag">RAG AI 상담</span><span class="tag">React Native</span><span class="tag">지도 연동</span><span class="tag">데이터 자동 갱신</span></div>
     <div class="gallery" data-imgs="dogcamping/00_home.jpg,dogcamping/01_map.jpg,dogcamping/02_detail.jpg,dogcamping/03_ios.jpg,dogcamping/04_ios.jpg,dogcamping/05_ios.jpg,dogcamping/06_ios.jpg"></div>
     <div class="plinks">
       <a class="plink" href="https://apps.apple.com/kr/app/id6799848258" target="_blank" rel="noopener"> App Store</a>
       <a class="plink" href="https://play.google.com/store/apps/details?id=com.animily.dogcamping" target="_blank" rel="noopener">▶ Google Play</a>
-      <a class="plink" href="https://camping.animily.co.kr" target="_blank" rel="noopener">↗ camping.animily.co.kr</a>
     </div>
   </article>
 
@@ -300,7 +351,7 @@
     <div class="auto-card reveal"><div class="ic">🤖</div><h4>Claude Code CLI 오케스트레이션</h4><p>AI 에이전트에게 반복 작업을 위임하고, 여러 서비스의 콘텐츠 생성·발행·광고를 무인으로 실행합니다.</p></div>
     <div class="auto-card reveal"><div class="ic">🫀</div><h4>하트비트 생존 감시 · 자가복구</h4><p>크론 배치와 하트비트로 상태를 감시하고, 실패하면 스스로 진단·수정·재시도하는 러너로 복구합니다.</p></div>
     <div class="auto-card reveal"><div class="ic">🚀</div><h4>Git Push → 자동 배포</h4><p>자체 Git 서버와 웹훅으로 push 즉시 서버에 반영되는 배포 파이프라인을 직접 구축·운영합니다.</p></div>
-    <div class="auto-card reveal"><div class="ic">🎬</div><h4>콘텐츠 생성·발행 전자동</h4><p>영상 제작부터 자막·SEO·BGM 믹싱, 멀티플랫폼 발행, 광고 운영까지 파이프라인 전체를 자동화했습니다.</p></div>
+    <div class="auto-card reveal"><div class="ic">🎬</div><h4>숏폼·블로그 무인 발행</h4><p>애니밀리 자동화 채널의 숏폼(YouTube·Instagram)과 블로그 글을 AI로 생성하고, 자막·SEO·BGM 믹싱·발행까지 자동 처리합니다.</p></div>
   </div>
 </section>
 
@@ -364,10 +415,33 @@
   </div>
 
   <p class="eyebrow reveal" style="margin-top:44px">Side Projects</p>
-  <div class="side">
-    <div class="chip reveal"><b>마이튜브</b> <span>· Django · YouTube Data API</span></div>
-    <div class="chip reveal"><b>트레이딩 봇 (oh-my-bot)</b> <span>· Python 퀀트 · 백테스팅</span></div>
-    <div class="chip reveal"><b>제이로더 (Jloader)</b> <span>· PyQt5 데스크톱 앱</span></div>
+  <div class="sproj-grid">
+    <article class="sproj reveal">
+      <div class="sproj-head"><h4>제이로더 <span class="en">Jloader</span></h4><span class="yr">2018.11 – 2019.02 · 단독</span></div>
+      <p class="d">토렌트 API와 Windows OLE 객체를 활용해 파일을 자동으로 내려받고 분류·관리하는 PyQt5 데스크톱 앱. 템플릿 메서드 패턴으로 사이트 클래스를 손쉽게 확장하도록 설계하고, 대용량 파일 해시를 블록 단위 제너레이터로 처리해 메모리 문제를 해결했습니다.</p>
+      <div class="tags"><span class="tag">Python · PyQt5</span><span class="tag">Torrent API · OLE</span><span class="tag">멀티스레딩</span><span class="tag">디자인 패턴</span></div>
+      <div class="gallery sm" data-imgs="side/jloader/00_ui.jpg,side/jloader/01_dir.jpg,side/jloader/02_exec.jpg,side/jloader/03_uml.jpg"></div>
+      <div class="plinks">
+        <a class="plink" href="pdf/jloader.pdf" target="_blank" rel="noopener">📄 발표자료</a>
+        <a class="plink" href="https://github.com/javamon1174/appendix" target="_blank" rel="noopener">GitHub (소스)</a>
+      </div>
+    </article>
+
+    <article class="sproj reveal">
+      <div class="sproj-head"><h4>마이튜브 <span class="en">MyTube</span></h4><span class="yr">2020.01 – 2020.02 · 단독</span></div>
+      <p class="d">YouTube Data API로 구독 목록을 관리하고 영상 댓글을 랜덤 추첨하는 웹앱. Django·allauth 기반 소셜 로그인, 다국어 지원, 게시판을 갖췄고 Docker Compose로 배포 환경을 구성했습니다.</p>
+      <div class="tags"><span class="tag">Django</span><span class="tag">YouTube Data API</span><span class="tag">OAuth · allauth</span><span class="tag">Docker Compose</span></div>
+      <div class="gallery sm" data-imgs="side/mytube/00_ui.jpg,side/mytube/01_arch.jpg"></div>
+      <div class="plinks">
+        <a class="plink" href="pdf/mytube_web.pdf" target="_blank" rel="noopener">📄 발표자료</a>
+      </div>
+    </article>
+
+    <article class="sproj reveal">
+      <div class="sproj-head"><h4>트레이딩 봇 <span class="en">oh-my-bot</span></h4><span class="yr">2019.03 – 2019.11 · 단독</span></div>
+      <p class="d">거래소 API로 가격 데이터를 수집·저장하고, TA-Lib 지표와 직접 구현한 매매 알고리즘을 조합해 종목을 자동 매매하는 퀀트 트레이딩 프로젝트. 멀티프로세싱 백테스팅 엔진으로 전략을 검증하고, cProfile·Cython으로 성능 병목을 개선했습니다.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">TA-Lib</span><span class="tag">백테스팅</span><span class="tag">멀티프로세싱 · Cython</span><span class="tag">APScheduler</span></div>
+    </article>
   </div>
 </section>
 
@@ -427,6 +501,46 @@
     es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+
+// TIMELINE
+(function(){
+  var tl=document.getElementById('tl'); if(!tl) return;
+  var S=2016, E=2026.83, span=E-S;
+  function P(x){return (x-S)/span*100;}
+  var COMP=[
+    {n:'프리윌커뮤니케이션',s:2016.00,e:2017.13,w:'2016.01 – 2017.02 · 개발팀',sp:'필립스 임직원몰·후기 게시판·볼빅 웹, 크롤링 배치 자동화 · PHP · jQuery'},
+    {n:'코코아비전',s:2017.25,e:2017.83,w:'2017.04 – 2017.10 · R&D 개발팀',sp:'사내 ERP, 웹 엑셀(CGLIST) · PHP CodeIgniter · jQuery'},
+    {n:'큰사람커넥트 연구소',s:2021.30,e:2022.83,w:'2021.04 – 2022.10 · 연구원(대리)',sp:'음성 AI R&D · STT 주문 키오스크·상담보조·IoT 관제 · Python Flask·WebSocket'},
+    {n:'윅슨어소시에이츠',s:2023.42,e:2026.83,on:1,w:'2023.05 – 현재 · 개발팀 대리',sp:'브이힐즈 PM · 시노서울 ERP · 서울라인 AIS · React Native · Python Flask · PostgreSQL'}
+  ];
+  var PROJ=[
+    {n:'제이로더',s:2018.83,e:2019.17,row:0,w:'2018.11 – 2019.02 · 단독',sp:'PyQt5 데스크톱 앱 · 토렌트 파일 업/다운·분류 · 멀티스레딩'},
+    {n:'트레이딩 봇',s:2019.25,e:2019.92,row:0,w:'2019.03 – 2019.11 · 단독',sp:'Python 퀀트 트레이딩·백테스팅 · TA-Lib · APScheduler'},
+    {n:'마이튜브',s:2020.00,e:2020.25,row:0,w:'2020.01 – 2020.02 · 단독',sp:'Django · YouTube Data API · 구독 관리·댓글 추첨'},
+    {n:'음성 키오스크 (ATC+)',s:2021.85,e:2022.83,row:0,w:'2021.11 – 2022.10 · 큰사람커넥트',sp:'STT·개체명 인식·전이학습 툴 · Flask·WebSocket·Electron'},
+    {n:'브이힐즈 (VHILLS)',s:2023.83,e:2026.83,row:0,on:1,w:'2023.10 – 현재 · 윅슨 · PM 총괄',sp:'RN·Flask·MariaDB · AES-256 암호화 · ChatGPT·미디어 생성 API · iOS/AOS/Web 출시'},
+    {n:'애니밀리',s:2024.00,e:2026.83,row:1,on:1,w:'개인 프로젝트 · 출시중',sp:'React Native·Firebase·Flask · 반려동물 행동교정·AI 상태분석 · iOS/AOS 출시'},
+    {n:'뚜띠 캠프',s:2025.30,e:2026.83,row:2,on:1,w:'개인 프로젝트 · 운영중',sp:'반려동물 채널 · 롱폼 직접 촬영·편집 + 숏폼(YouTube·Instagram) 자동 발행 · Claude Code CLI'},
+    {n:'독캠핑',s:2026.50,e:2026.83,row:3,on:1,w:'개인 프로젝트 · 출시중',sp:'React Native·Flask·RAG AI · 반려견 캠핑 정보·AI 상담 · iOS/AOS 출시'}
+  ];
+  function bar(d,kind){
+    var b=document.createElement('div'); b.className='tl-bar '+kind+(d.on?' on':''); b.tabIndex=0;
+    b.style.left=P(d.s)+'%'; b.style.width=Math.max(P(d.e)-P(d.s),0)+'%';
+    var lbl=document.createElement('span'); lbl.className='lbl'; lbl.textContent=d.n+(d.on?' ▶':''); b.appendChild(lbl);
+    var tip=document.createElement('div'); tip.className='tip'+(P(d.s)>50?' r':'');
+    tip.innerHTML='<b>'+d.n+'</b><div class="wh">'+d.w+'</div><div class="sp">'+d.sp+'</div>';
+    b.appendChild(tip); return b;
+  }
+  var axis=document.createElement('div'); axis.className='tl-axis';
+  for(var y=2016;y<=2026;y++){ var t=document.createElement('span'); t.className='tl-tick'; t.style.left=P(y)+'%'; if(y===2016)t.style.transform='translateX(0)'; if(y===2026)t.style.transform='translateX(-100%)'; t.textContent=y; axis.appendChild(t); }
+  tl.appendChild(axis);
+  var l1=document.createElement('div'); l1.className='tl-lane'; l1.textContent='재직 이력'; tl.appendChild(l1);
+  var r1=document.createElement('div'); r1.className='tl-row'; COMP.forEach(function(c){ r1.appendChild(bar(c,'co')); }); tl.appendChild(r1);
+  var l2=document.createElement('div'); l2.className='tl-lane'; l2.textContent='프로젝트'; tl.appendChild(l2);
+  var rows=[]; for(var r=0;r<4;r++){ rows[r]=document.createElement('div'); rows[r].className='tl-row'; }
+  PROJ.forEach(function(p){ rows[p.row].appendChild(bar(p,'pj')); });
+  rows.forEach(function(rr){ tl.appendChild(rr); });
 })();
 </script>
 </body>
