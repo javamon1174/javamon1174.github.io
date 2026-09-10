@@ -1,7 +1,430 @@
----
-layout: home
-excerpt: "A simple and clean responsive Jekyll theme for words and photos."
-show_excerpts: true
-paginate: true
-entries_layout: list
----
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>유상준 · Yoo Sang Jun — 풀스택 · 앱 · AI 개발자</title>
+<meta name="description" content="웹·앱·AI 서비스를 기획부터 출시·운영까지 직접 만드는 풀스택 개발자 유상준의 포트폴리오. 애니밀리, 브이힐즈, 독캠핑, 음성 키오스크, 뚜띠 캠프.">
+<meta property="og:title" content="유상준 — 풀스택 · 앱 · AI 개발자">
+<meta property="og:description" content="기획부터 출시·운영까지 직접 만드는 풀스택 개발자 포트폴리오">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.png">
+<style>
+  :root{
+    --bg:#ffffff; --bg-soft:#f5f5f7; --bg-card:#ffffff; --border:#e6e6ea;
+    --fg:#16161a; --fg-soft:#5a5a66; --fg-mute:#8a8a96;
+    --accent:#5b5bd6; --accent-soft:#ececfb; --accent-fg:#ffffff;
+    --shadow:0 1px 2px rgba(20,20,30,.04),0 8px 24px rgba(20,20,30,.06);
+    --shadow-lg:0 12px 40px rgba(20,20,30,.14);
+    --radius:18px; --maxw:1080px;
+    --font:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","맑은 고딕",Segoe UI,Roboto,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#0e0e11; --bg-soft:#16161b; --bg-card:#17171c; --border:#26262e;
+      --fg:#f2f2f5; --fg-soft:#b3b3c0; --fg-mute:#7c7c8a;
+      --accent:#8b8bf5; --accent-soft:#1e1e2c; --accent-fg:#0e0e11;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.4);
+      --shadow-lg:0 12px 40px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#ffffff; --bg-soft:#f5f5f7; --bg-card:#ffffff; --border:#e6e6ea;
+    --fg:#16161a; --fg-soft:#5a5a66; --fg-mute:#8a8a96;
+    --accent:#5b5bd6; --accent-soft:#ececfb; --accent-fg:#ffffff;
+    --shadow:0 1px 2px rgba(20,20,30,.04),0 8px 24px rgba(20,20,30,.06);
+    --shadow-lg:0 12px 40px rgba(20,20,30,.14);
+  }
+  :root[data-theme="dark"]{
+    --bg:#0e0e11; --bg-soft:#16161b; --bg-card:#17171c; --border:#26262e;
+    --fg:#f2f2f5; --fg-soft:#b3b3c0; --fg-mute:#7c7c8a;
+    --accent:#8b8bf5; --accent-soft:#1e1e2c; --accent-fg:#0e0e11;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.4);
+    --shadow-lg:0 12px 40px rgba(0,0,0,.55);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);
+    line-height:1.65;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  section{padding:88px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
+  h2.title{font-size:clamp(26px,4vw,38px);font-weight:800;margin:0 0 10px;letter-spacing:-.02em}
+  .sub{color:var(--fg-soft);font-size:16px;margin:0 0 40px;max-width:640px}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(14px);
+    background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--border)}
+  .nav-in{max-width:var(--maxw);margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:20px}
+  .brand{font-weight:800;font-size:16px;letter-spacing:-.02em}
+  .brand span{color:var(--accent)}
+  .nav-links{margin-left:auto;display:flex;gap:6px;align-items:center}
+  .nav-links a{padding:8px 12px;border-radius:10px;font-size:14px;color:var(--fg-soft);font-weight:600}
+  .nav-links a:hover{color:var(--fg);background:var(--bg-soft)}
+  .toggle{width:38px;height:38px;border:1px solid var(--border);background:var(--bg-card);border-radius:11px;
+    cursor:pointer;display:grid;place-items:center;color:var(--fg);font-size:16px;transition:.2s}
+  .toggle:hover{border-color:var(--accent)}
+  @media(max-width:680px){.nav-links a:not(.btn-mini){display:none}}
+
+  /* HERO */
+  .hero{padding:96px 0 64px;position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:-40% -20% auto;height:520px;z-index:-1;
+    background:radial-gradient(60% 60% at 30% 20%,color-mix(in srgb,var(--accent) 26%,transparent),transparent 70%);
+    filter:blur(20px);opacity:.7}
+  .hero .avail{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--fg-soft);
+    background:var(--bg-soft);border:1px solid var(--border);padding:6px 13px;border-radius:100px;margin-bottom:22px}
+  .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px color-mix(in srgb,#22c55e 22%,transparent)}
+  .hero h1{font-size:clamp(34px,6vw,60px);line-height:1.08;font-weight:850;margin:0 0 8px;letter-spacing:-.035em}
+  .hero h1 .accent{background:linear-gradient(120deg,var(--accent),#c084fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .role{font-size:clamp(17px,2.4vw,21px);color:var(--fg-soft);font-weight:600;margin:0 0 22px}
+  .hero .lead{font-size:17px;color:var(--fg-soft);max-width:620px;margin:0 0 30px}
+  .cta{display:flex;flex-wrap:wrap;gap:11px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;font-weight:700;font-size:15px;
+    border:1px solid var(--border);background:var(--bg-card);color:var(--fg);cursor:pointer;transition:.18s}
+  .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .btn.primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+  .stats{display:flex;flex-wrap:wrap;gap:34px;margin-top:44px}
+  .stat b{display:block;font-size:clamp(24px,3.4vw,32px);font-weight:850;letter-spacing:-.03em}
+  .stat span{font-size:13px;color:var(--fg-mute);font-weight:600}
+
+  /* PROJECTS */
+  .proj{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:30px;margin-bottom:26px;box-shadow:var(--shadow);transition:.25s}
+  .proj:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+  .proj-head{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+  .proj h3{font-size:23px;font-weight:800;margin:0;letter-spacing:-.02em}
+  .proj .en{color:var(--fg-mute);font-weight:600;font-size:15px;margin-left:2px}
+  .badges{display:flex;gap:7px;flex-wrap:wrap;margin-left:auto}
+  .badge{font-size:12px;font-weight:700;padding:5px 11px;border-radius:100px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+  .badge.live{background:color-mix(in srgb,#22c55e 16%,transparent);color:#16a34a}
+  :root[data-theme="dark"] .badge.live,@media(prefers-color-scheme:dark){}
+  .proj .one{font-size:16px;color:var(--fg);font-weight:600;margin:8px 0 12px}
+  .proj .desc{color:var(--fg-soft);font-size:15px;margin:0 0 18px}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 18px}
+  .tag{font-size:12.5px;font-weight:600;color:var(--fg-soft);background:var(--bg-soft);
+    border:1px solid var(--border);padding:5px 11px;border-radius:8px}
+  .plinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .plink{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:var(--accent);
+    padding:9px 15px;border:1px solid var(--border);border-radius:10px;transition:.18s;background:var(--bg)}
+  .plink:hover{border-color:var(--accent);background:var(--accent-soft)}
+
+  /* GALLERY */
+  .gallery{display:flex;gap:12px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch}
+  .gallery::-webkit-scrollbar{height:8px}
+  .gallery::-webkit-scrollbar-thumb{background:var(--border);border-radius:100px}
+  .gallery img{height:340px;width:auto;border-radius:14px;border:1px solid var(--border);
+    scroll-snap-align:start;cursor:zoom-in;background:var(--bg-soft);flex:0 0 auto;transition:.18s;object-fit:cover}
+  .gallery img.wide{height:340px}
+  .gallery img:hover{border-color:var(--accent)}
+  @media(max-width:680px){.gallery img{height:280px}}
+
+  /* AUTOMATION */
+  .auto-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .auto-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .auto-card .ic{font-size:24px;margin-bottom:12px}
+  .auto-card h4{margin:0 0 7px;font-size:16px;font-weight:800}
+  .auto-card p{margin:0;font-size:14px;color:var(--fg-soft)}
+
+  /* SKILLS */
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .skill-group{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+  .skill-group h4{margin:0 0 14px;font-size:14px;font-weight:800;color:var(--accent);letter-spacing:.02em}
+  .skill-group .tags .tag{background:var(--bg-soft)}
+
+  /* EXPERIENCE */
+  .exp{position:relative;padding-left:28px}
+  .exp:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--border)}
+  .exp-item{position:relative;padding:0 0 30px}
+  .exp-item:last-child{padding-bottom:0}
+  .exp-item:before{content:"";position:absolute;left:-26px;top:6px;width:12px;height:12px;border-radius:50%;
+    background:var(--bg);border:3px solid var(--accent)}
+  .exp-item .when{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:3px}
+  .exp-item h4{margin:0;font-size:18px;font-weight:800}
+  .exp-item .where{font-size:14px;color:var(--fg-mute);font-weight:600;margin:2px 0 8px}
+  .exp-item ul{margin:0;padding-left:18px;color:var(--fg-soft);font-size:14.5px}
+  .exp-item li{margin:3px 0}
+  .side{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .side .chip{background:var(--bg-soft);border:1px solid var(--border);border-radius:12px;padding:12px 15px;font-size:13.5px}
+  .side .chip b{font-weight:800}
+  .side .chip span{color:var(--fg-mute)}
+
+  /* CONTACT */
+  .contact{background:var(--bg-soft);border-radius:26px;padding:56px 30px;text-align:center;border:1px solid var(--border)}
+  .contact h2{font-size:clamp(26px,4vw,36px);font-weight:850;margin:0 0 10px;letter-spacing:-.02em}
+  .contact p{color:var(--fg-soft);margin:0 0 26px}
+  .contact .cta{justify-content:center}
+  footer{border-top:1px solid var(--border);padding:34px 0;color:var(--fg-mute);font-size:13px}
+  .foot-in{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+
+  /* LIGHTBOX */
+  .lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+  .lb.on{display:flex}
+  .lb img{max-width:94vw;max-height:92vh;width:auto;height:auto;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+  .lb .x{position:absolute;top:18px;right:22px;color:#fff;font-size:30px;font-weight:300;cursor:pointer;line-height:1}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <a href="#top" class="brand">유상준<span>.</span>dev</a>
+    <nav class="nav-links">
+      <a href="#projects">프로젝트</a>
+      <a href="#automation">자동화</a>
+      <a href="#skills">스킬</a>
+      <a href="#experience">경력</a>
+      <a href="#contact" class="btn-mini">연락</a>
+      <button class="toggle" id="themeToggle" aria-label="테마 전환" title="라이트/다크 전환">◐</button>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero wrap">
+  <div class="avail"><span class="dot"></span> 새로운 기회를 찾고 있습니다</div>
+  <h1>기획부터 출시·운영까지,<br><span class="accent">혼자 만들어 굴리는</span> 개발자</h1>
+  <p class="role">유상준 · Yoo Sang Jun — 풀스택 · 모바일 앱 · AI 서비스 개발</p>
+  <p class="lead">React Native 앱과 웹, AI 서비스를 직접 기획·설계·개발하고 스토어 출시와 무인 운영까지 책임집니다. 앱 3종을 출시했고, AI 에이전트로 여러 서비스를 사람 손 없이 자동 운영하고 있습니다.</p>
+  <div class="cta">
+    <a href="#projects" class="btn primary">프로젝트 보기 →</a>
+    <a href="mailto:javamon1174@gmail.com" class="btn">✉ 이메일</a>
+    <a href="https://github.com/javamon1174" target="_blank" rel="noopener" class="btn">GitHub</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>2016~</b><span>실무 개발 경력</span></div>
+    <div class="stat"><b>앱 3종</b><span>iOS · Android 출시</span></div>
+    <div class="stat"><b>End-to-End</b><span>기획·개발·운영 전 과정</span></div>
+    <div class="stat"><b>AI 자동화</b><span>무인 멀티서비스 운영</span></div>
+  </div>
+</section>
+
+<section id="projects" class="wrap">
+  <p class="eyebrow reveal">Featured Work</p>
+  <h2 class="title reveal">대표 프로젝트</h2>
+  <p class="sub reveal">실제로 출시·운영 중인 서비스들입니다. 이미지를 누르면 크게 볼 수 있습니다.</p>
+
+  <!-- ANIMILY -->
+  <article class="proj reveal">
+    <div class="proj-head">
+      <div><h3>애니밀리 <span class="en">Animily</span></h3></div>
+      <div class="badges"><span class="badge live">출시중</span><span class="badge">개인 프로젝트</span><span class="badge">React Native</span></div>
+    </div>
+    <p class="one">반려동물의 행동교정부터 건강관리까지, 보호자와 전문가를 잇는 종합 플랫폼</p>
+    <p class="desc">자격을 인증받은 훈련사와의 1:1 행동교정 솔루션(온·오프라인), 전문가 실시간 상담, 사료·식단 관리와 유해성분 알림, 보호소 후원, 반려인 커뮤니티까지 하나의 앱에 담았습니다. 카메라·마이크 기반 AI 반려동물 상태 분석으로 아이의 감정과 컨디션을 실시간으로 확인할 수 있습니다. 기획·디자인·앱·백엔드·인프라·출시·운영 전 과정을 직접 수행했습니다.</p>
+    <div class="tags"><span class="tag">React Native</span><span class="tag">Firebase</span><span class="tag">Python · Flask</span><span class="tag">결제 · OAuth · 푸시</span><span class="tag">AI 상태 분석</span></div>
+    <div class="gallery" data-imgs="animily/00.jpg,animily/01.jpg,animily/02.jpg,animily/03.jpg,animily/04.jpg,animily/05.jpg,animily/06.jpg,animily/07.jpg,animily/08.jpg"></div>
+    <div class="plinks">
+      <a class="plink" href="https://play.google.com/store/apps/details?id=com.conimal.conimals" target="_blank" rel="noopener">▶ Google Play</a>
+    </div>
+  </article>
+
+  <!-- VHILLS -->
+  <article class="proj reveal">
+    <div class="proj-head">
+      <div><h3>브이힐즈 <span class="en">VHILLS</span></h3></div>
+      <div class="badges"><span class="badge live">출시중</span><span class="badge">PM 총괄</span><span class="badge">윅슨어소시에이츠</span></div>
+    </div>
+    <p class="one">태어나서 생을 마칠 때까지, 전 생애 자산정보를 안전하게 관리하는 앱</p>
+    <p class="desc">기획 초기부터 개발·테스트·런칭까지 PM으로 전 과정을 리딩했습니다. AES-256 자산 데이터 암호화, 상속인 지정·정보 전송, 유언장 작성 지원 등 민감정보를 다루는 핵심 기능을 설계·개발했습니다. ChatGPT API 기반 실시간 고객 상담, AI 딥리서치로 도전 과제를 생성·관리하는 버킷리스트 서비스, 마케팅용 영상·콘텐츠 생성 자동화(상용 미디어 생성 API 활용)까지 구현하고, iOS·Android·Web을 동시 개발·출시했습니다.</p>
+    <div class="tags"><span class="tag">React Native</span><span class="tag">인앱결제 웹뷰</span><span class="tag">Python · Flask</span><span class="tag">MariaDB</span><span class="tag">Jenkins</span><span class="tag">ChatGPT API</span><span class="tag">미디어 생성 API</span></div>
+    <div class="gallery" data-imgs="vhills/01_intro.jpg,vhills/00_vnews.jpg,vhills/02_bucket.jpg"></div>
+    <div class="plinks">
+      <a class="plink" href="https://apps.apple.com/app/id6502982713" target="_blank" rel="noopener"> App Store</a>
+      <a class="plink" href="https://play.google.com/store/apps/details?id=com.wixon.vhills" target="_blank" rel="noopener">▶ Google Play</a>
+      <a class="plink" href="https://vhills.co.kr" target="_blank" rel="noopener">↗ vhills.co.kr</a>
+    </div>
+  </article>
+
+  <!-- DOGCAMPING -->
+  <article class="proj reveal">
+    <div class="proj-head">
+      <div><h3>독캠핑 <span class="en">Dogcamping</span></h3></div>
+      <div class="badges"><span class="badge live">웹 라이브</span><span class="badge">개인 프로젝트</span><span class="badge">RAG AI</span></div>
+    </div>
+    <p class="one">반려견과 함께 떠나는 캠핑, 장소 찾기부터 AI 상담까지</p>
+    <p class="desc">전국 반려견 동반 캠핑장을 지도와 목록을 오가며 탐색하고, RAG 기반 AI 상담으로 궁금한 점을 바로 물어볼 수 있는 서비스입니다. 캠핑장 데이터는 정기적으로 자동 갱신되며, 웹 서비스와 React Native 앱으로 함께 제공합니다.</p>
+    <div class="tags"><span class="tag">Python · Flask</span><span class="tag">RAG AI 상담</span><span class="tag">React Native</span><span class="tag">지도 연동</span><span class="tag">데이터 자동 갱신</span></div>
+    <div class="gallery" data-imgs="dogcamping/00_home.jpg,dogcamping/01_map.jpg,dogcamping/02_detail.jpg,dogcamping/03_ios.jpg,dogcamping/04_ios.jpg,dogcamping/05_ios.jpg,dogcamping/06_ios.jpg"></div>
+    <div class="plinks">
+      <a class="plink" href="https://camping.animily.co.kr" target="_blank" rel="noopener">↗ camping.animily.co.kr</a>
+    </div>
+  </article>
+
+  <!-- KIOSK -->
+  <article class="proj reveal">
+    <div class="proj-head">
+      <div><h3>음성 주문 키오스크 <span class="en">ATC+</span></h3></div>
+      <div class="badges"><span class="badge">R&amp;D 과제</span><span class="badge">큰사람커넥트</span><span class="badge">STT · NLP</span></div>
+    </div>
+    <p class="one">터치 대신 말로 주문하는, 음성 기반 대화형 카페 주문 키오스크</p>
+    <p class="desc">우수기업연구소육성사업(ATC+) 과제로 음성만으로 메뉴와 옵션을 주문하는 키오스크 프로토타입을 설계·개발했습니다. 웹 브라우저에서 WebSocket으로 음성을 서버에 전송하면 STT로 텍스트화하고, 개체명 인식과 유사 단어 보정으로 의도를 파악해 주문을 처리합니다. 미인식 음성을 녹음·학습하는 전이학습 툴과 상품·키워드 등록 페이지로 인식률을 지속적으로 개선했으며, 상담보조 시스템과 IoT 관제 시스템도 함께 설계했습니다.</p>
+    <div class="tags"><span class="tag">Python · Flask</span><span class="tag">WebSocket</span><span class="tag">STT</span><span class="tag">개체명 인식</span><span class="tag">Electron</span><span class="tag">Oracle · MySQL</span></div>
+    <div class="gallery" data-imgs="kiosk/8.jpg,kiosk/5.jpg,kiosk/20.jpg,kiosk/30.jpg,kiosk/45.jpg,kiosk/60.jpg"></div>
+    <div class="plinks">
+      <a class="plink" href="https://youtu.be/BLCbWx5jT0c" target="_blank" rel="noopener">▶ 시연 영상 보기</a>
+    </div>
+  </article>
+
+  <!-- TUTTI CAMP -->
+  <article class="proj reveal">
+    <div class="proj-head">
+      <div><h3>뚜띠 캠프 <span class="en">TUTTI CAMP</span></h3></div>
+      <div class="badges"><span class="badge live">운영중</span><span class="badge">개인 프로젝트</span><span class="badge">무인 자동화</span></div>
+    </div>
+    <p class="one">사람 없이 굴러가는 반려동물 숏폼 콘텐츠 자동 운영 시스템</p>
+    <p class="desc">영상 생성·편집, 자막과 SEO 최적화, BGM 자동 믹싱, 여러 플랫폼 동시 발행, 광고 운영까지 콘텐츠 파이프라인 전체를 무인으로 자동화했습니다. Claude Code CLI로 작업을 오케스트레이션하고, 크론 스케줄과 하트비트 기반 생존 감시, 실패 시 스스로 진단·복구하는 러너를 두어 매일 사람 손 없이 운영됩니다.</p>
+    <div class="tags"><span class="tag">Python</span><span class="tag">Claude Code CLI</span><span class="tag">cron 오케스트레이션</span><span class="tag">YouTube · SNS API</span><span class="tag">Google Ads 자동화</span></div>
+    <div class="gallery" data-imgs="tutti/00.jpg,tutti/01.jpg,tutti/02.jpg,tutti/03.jpg,tutti/04.jpg,tutti/05.jpg,tutti/06.jpg,tutti/07.jpg"></div>
+    <div class="plinks">
+      <a class="plink" href="https://www.youtube.com/@tutti-camp" target="_blank" rel="noopener">▶ YouTube @tutti-camp</a>
+    </div>
+  </article>
+</section>
+
+<section id="automation" class="wrap">
+  <p class="eyebrow reveal">What Sets Me Apart</p>
+  <h2 class="title reveal">AI 에이전트로 혼자서 팀 규모를 운영합니다</h2>
+  <p class="sub reveal">단순히 AI 도구를 쓰는 것을 넘어, AI 에이전트를 엮어 여러 프로덕션 서비스를 사람 개입 없이 자동으로 운영하는 시스템을 설계합니다.</p>
+  <div class="auto-grid">
+    <div class="auto-card reveal"><div class="ic">🤖</div><h4>Claude Code CLI 오케스트레이션</h4><p>AI 에이전트에게 반복 작업을 위임하고, 여러 서비스의 콘텐츠 생성·발행·광고를 무인으로 실행합니다.</p></div>
+    <div class="auto-card reveal"><div class="ic">🫀</div><h4>하트비트 생존 감시 · 자가복구</h4><p>크론 배치와 하트비트로 상태를 감시하고, 실패하면 스스로 진단·수정·재시도하는 러너로 복구합니다.</p></div>
+    <div class="auto-card reveal"><div class="ic">🚀</div><h4>Git Push → 자동 배포</h4><p>자체 Git 서버와 웹훅으로 push 즉시 서버에 반영되는 배포 파이프라인을 직접 구축·운영합니다.</p></div>
+    <div class="auto-card reveal"><div class="ic">🎬</div><h4>콘텐츠 생성·발행 전자동</h4><p>영상 제작부터 자막·SEO·BGM 믹싱, 멀티플랫폼 발행, 광고 운영까지 파이프라인 전체를 자동화했습니다.</p></div>
+  </div>
+</section>
+
+<section id="skills" class="wrap">
+  <p class="eyebrow reveal">Tech Stack</p>
+  <h2 class="title reveal">스킬</h2>
+  <p class="sub reveal">웹·앱·AI·인프라를 아우르는 풀스택. 새 기술이 필요하면 직접 학습해 프로덕션에 적용합니다.</p>
+  <div class="skills">
+    <div class="skill-group reveal"><h4>Mobile · Frontend</h4><div class="tags"><span class="tag">React Native</span><span class="tag">JavaScript</span><span class="tag">jQuery</span><span class="tag">HTML5 · CSS3</span><span class="tag">Bootstrap</span><span class="tag">Electron</span></div></div>
+    <div class="skill-group reveal"><h4>Backend</h4><div class="tags"><span class="tag">Python · Flask</span><span class="tag">Django</span><span class="tag">PHP · CodeIgniter</span><span class="tag">Laravel</span><span class="tag">Node.js</span><span class="tag">WebSocket</span></div></div>
+    <div class="skill-group reveal"><h4>Database</h4><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL · MariaDB</span><span class="tag">Redis</span><span class="tag">Oracle</span><span class="tag">Firebase</span></div></div>
+    <div class="skill-group reveal"><h4>DevOps · Infra</h4><div class="tags"><span class="tag">Linux</span><span class="tag">Nginx</span><span class="tag">Jenkins</span><span class="tag">Docker</span><span class="tag">GCP · AWS</span><span class="tag">Git · Gitea</span><span class="tag">cron 자동화</span></div></div>
+    <div class="skill-group reveal"><h4>AI</h4><div class="tags"><span class="tag">ChatGPT · LLM API</span><span class="tag">RAG</span><span class="tag">STT · 개체명 인식</span><span class="tag">미디어 생성 API</span><span class="tag">멀티모달 분석</span></div></div>
+    <div class="skill-group reveal"><h4>AI-Assisted Dev</h4><div class="tags"><span class="tag">Claude Code CLI</span><span class="tag">에이전트 워크플로우</span><span class="tag">프롬프트 엔지니어링</span><span class="tag">무인 자동화 파이프라인</span></div></div>
+  </div>
+</section>
+
+<section id="experience" class="wrap">
+  <p class="eyebrow reveal">Career</p>
+  <h2 class="title reveal">경력</h2>
+  <div class="exp">
+    <div class="exp-item reveal">
+      <div class="when">2023.05 — 현재</div>
+      <h4>(주)윅슨어소시에이츠 · 개발팀 대리</h4>
+      <div class="where">IT 솔루션 개발 및 컨설팅</div>
+      <ul>
+        <li><b>브이힐즈(VHILLS)</b> — 전 생애 자산관리 앱, 기획~출시 PM 총괄 · AES-256 암호화 · iOS/Android/Web 출시</li>
+        <li><b>시노서울(SinoSeoul)</b> — 중국 의료기기 수출 컨설팅 웹 서비스, 회원·권한 관리 프로세스 설계·구축</li>
+        <li><b>서울라인(SeoulLine)</b> — AIS 신호 기반 유류선박 실시간 추적·모니터링 시스템</li>
+      </ul>
+    </div>
+    <div class="exp-item reveal">
+      <div class="when">2021.04 — 2022.10</div>
+      <h4>(주)큰사람커넥트 연구소 · 연구원(대리)</h4>
+      <div class="where">응용 소프트웨어 개발 및 공급 · 기업부설연구소</div>
+      <ul>
+        <li><b>음성 기반 주문 키오스크(ATC+)</b> — STT·개체명 인식·전이학습 툴 설계·개발</li>
+        <li>음성 기반 상담보조 시스템 · IoT 관제 시스템 설계</li>
+        <li>MVNO 백오피스 유지보수 · 알뜰폰 허브 등 외부 서비스 API 연동</li>
+      </ul>
+    </div>
+    <div class="exp-item reveal">
+      <div class="when">2017.04 — 2017.10</div>
+      <h4>(주)코코아비전 R&amp;D · 개발팀</h4>
+      <div class="where">영상·방송 콘텐츠 제작 서비스</div>
+      <ul>
+        <li>사내 ERP 기획·개발·유지보수 (Front-End)</li>
+        <li><b>웹 엑셀(CGLIST)</b> — 열 고정·필터·에디터 연동 등 스프레드시트형 웹 애플리케이션</li>
+      </ul>
+    </div>
+    <div class="exp-item reveal">
+      <div class="when">2016.01 — 2017.02</div>
+      <h4>(주)프리윌커뮤니케이션 · 개발팀</h4>
+      <div class="where">온라인 서비스 · 웹 솔루션 개발</div>
+      <ul>
+        <li>필립스 임직원 쇼핑몰 관리자 페이지 · 후기 게시판 단독 개발</li>
+        <li>볼빅 웹사이트 유지보수 · 신규 개발</li>
+        <li>오픈마켓 크롤링 배치 프로세스 자동화 (14시간 → 1시간 이내 단축)</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="eyebrow reveal" style="margin-top:44px">Side Projects</p>
+  <div class="side">
+    <div class="chip reveal"><b>마이튜브</b> <span>· Django · YouTube Data API</span></div>
+    <div class="chip reveal"><b>트레이딩 봇 (oh-my-bot)</b> <span>· Python 퀀트 · 백테스팅</span></div>
+    <div class="chip reveal"><b>제이로더 (Jloader)</b> <span>· PyQt5 데스크톱 앱</span></div>
+  </div>
+</section>
+
+<section id="contact" class="wrap">
+  <div class="contact reveal">
+    <h2>함께 일할 기회를 찾고 있습니다</h2>
+    <p>서비스를 처음부터 끝까지 만들고 굴려본 개발자가 필요하시다면 편하게 연락 주세요.</p>
+    <div class="cta">
+      <a href="mailto:javamon1174@gmail.com" class="btn primary">✉ javamon1174@gmail.com</a>
+      <a href="https://github.com/javamon1174" target="_blank" rel="noopener" class="btn">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-in">
+    <div>© 2026 유상준 · Yoo Sang Jun</div>
+    <div>정보처리산업기사 · 컴퓨터활용능력 1급 · 정보기기운용기능사</div>
+  </div>
+</footer>
+
+<div class="lb" id="lb"><span class="x">×</span><img alt=""></div>
+
+<script>
+(function(){
+  // THEME
+  var root=document.documentElement, t=localStorage.getItem('theme');
+  if(t) root.setAttribute('data-theme',t);
+  document.getElementById('themeToggle').addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur){ cur = matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'; }
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next); localStorage.setItem('theme',next);
+  });
+
+  // GALLERIES
+  document.querySelectorAll('.gallery').forEach(function(g){
+    var imgs=(g.getAttribute('data-imgs')||'').split(',').filter(Boolean);
+    imgs.forEach(function(src){
+      var im=document.createElement('img');
+      im.loading='lazy'; im.src='assets/img/'+src.trim(); im.alt='';
+      g.appendChild(im);
+    });
+  });
+
+  // LIGHTBOX
+  var lb=document.getElementById('lb'), lbImg=lb.querySelector('img');
+  document.addEventListener('click',function(e){
+    var im=e.target.closest('.gallery img');
+    if(im){ lbImg.src=im.src; lb.classList.add('on'); return; }
+    if(e.target.closest('#lb')){ lb.classList.remove('on'); lbImg.src=''; }
+  });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'){lb.classList.remove('on');lbImg.src='';} });
+
+  // REVEAL
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
