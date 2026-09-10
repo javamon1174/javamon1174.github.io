@@ -174,8 +174,20 @@
     border:1px solid color-mix(in srgb,var(--accent) 34%,transparent);border-radius:14px;padding:12px 18px;margin:0 0 26px}
   .tl-total b{font-size:20px;font-weight:850;color:var(--accent);letter-spacing:-.02em}
   .tl-total span{font-size:13px;color:var(--fg-soft);font-weight:600}
-  .tl-wrap{overflow-x:auto;padding-bottom:12px}
-  .tl{position:relative;min-width:940px;padding-top:6px}
+  .tl-scroller{position:relative}
+  .tl-wrap{overflow-x:auto;padding-bottom:14px;scrollbar-width:thin;scrollbar-color:var(--fg-mute) transparent;scroll-behavior:smooth}
+  .tl-wrap::-webkit-scrollbar{height:10px}
+  .tl-wrap::-webkit-scrollbar-track{background:var(--bg-soft);border-radius:100px}
+  .tl-wrap::-webkit-scrollbar-thumb{background:var(--border);border-radius:100px;border:2px solid var(--bg-soft)}
+  .tl-wrap::-webkit-scrollbar-thumb:hover{background:var(--fg-mute)}
+  .tl{position:relative;min-width:900px;padding-top:6px}
+  .tl-fade{position:absolute;top:0;bottom:14px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+  .tl-fade.l{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+  .tl-fade.r{right:0;background:linear-gradient(270deg,var(--bg),transparent)}
+  .tl-scroller.can-left .tl-fade.l{opacity:1}
+  .tl-scroller.can-right .tl-fade.r{opacity:1}
+  .tl-swipe{display:none;font-size:12px;color:var(--accent);font-weight:700;margin-top:2px;text-align:center;letter-spacing:.02em}
+  .tl-scroller.can-left .tl-swipe,.tl-scroller.can-right .tl-swipe{display:block}
   .tl-axis{position:relative;height:24px;margin-bottom:10px;border-bottom:1px solid var(--border)}
   .tl-tick{position:absolute;top:2px;transform:translateX(-50%);font-size:11.5px;color:var(--fg-mute);font-weight:600}
   .tl-tick:after{content:"";position:absolute;left:50%;top:18px;width:1px;height:7px;background:var(--border)}
@@ -252,8 +264,10 @@
   <h2 class="title reveal">한눈에 보는 경력 &amp; 프로젝트 타임라인</h2>
   <p class="sub reveal">2016년 첫 실무부터 지금까지 — 재직 이력과 직접 만든 프로젝트를 한 줄에 담았습니다. 막대에 마우스를 올리면(모바일은 탭) 기술 스펙이 나타납니다.</p>
   <div class="tl-total reveal"><b>회사 경력 6년 9개월</b><span>2016 → 현재 · 4개 기업 재직 · 출시 앱 3종 · 서비스 다수 운영</span></div>
-  <div class="tl-wrap">
-    <div class="tl" id="tl"></div>
+  <div class="tl-scroller">
+    <div class="tl-wrap"><div class="tl" id="tl"></div></div>
+    <div class="tl-fade l"></div><div class="tl-fade r"></div>
+    <p class="tl-swipe">← 좌우로 스크롤하여 전체 기간 보기 →</p>
   </div>
   <p class="tl-hint reveal">■ 진한 막대 = 재직 · 옅은 막대 = 프로젝트 · 점선 테두리 = 현재 진행 중 · 개인 프로젝트 일부 시점은 근사치입니다.</p>
 </section>
@@ -507,7 +521,7 @@
 // TIMELINE
 (function(){
   var tl=document.getElementById('tl'); if(!tl) return;
-  var S=2016, E=2026.83, span=E-S;
+  var S=2016, E=2027, span=E-S;
   function P(x){return (x-S)/span*100;}
   var COMP=[
     {n:'프리윌커뮤니케이션',s:2016.00,e:2017.13,w:'2016.01 – 2017.02 · 개발팀',sp:'필립스 임직원몰·후기 게시판·볼빅 웹, 크롤링 배치 자동화 · PHP · jQuery'},
@@ -542,6 +556,15 @@
   var rows=[]; for(var r=0;r<4;r++){ rows[r]=document.createElement('div'); rows[r].className='tl-row'; }
   PROJ.forEach(function(p){ rows[p.row].appendChild(bar(p,'pj')); });
   rows.forEach(function(rr){ tl.appendChild(rr); });
+  // scroll affordance (fade edges + swipe hint)
+  var sc=tl.parentElement, outer=sc.parentElement;
+  function upd(){
+    outer.classList.toggle('can-right', sc.scrollLeft + sc.clientWidth < sc.scrollWidth - 24);
+    outer.classList.toggle('can-left', sc.scrollLeft > 8);
+  }
+  sc.addEventListener('scroll', upd, {passive:true});
+  window.addEventListener('resize', upd);
+  setTimeout(upd, 60); upd();
 })();
 </script>
 </body>
