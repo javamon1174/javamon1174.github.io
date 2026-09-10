@@ -127,6 +127,10 @@
   .auto-card .ic{font-size:24px;margin-bottom:12px}
   .auto-card h4{margin:0 0 7px;font-size:16px;font-weight:800}
   .auto-card p{margin:0;font-size:14px;color:var(--fg-soft)}
+  .autogen{margin-top:30px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+  .autogen h4{margin:0 0 6px;font-size:18px;font-weight:800;letter-spacing:-.02em}
+  .autogen .ag-sub{margin:0 0 16px;font-size:14.5px;color:var(--fg-soft)}
+  .autogen .ag-badge{display:inline-block;font-size:12px;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:100px;margin-bottom:12px}
 
   /* SKILLS */
   .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
@@ -393,6 +397,16 @@
     <div class="auto-card reveal"><div class="ic">🫀</div><h4>하트비트 생존 감시 · 자가복구</h4><p>크론 배치와 하트비트로 상태를 감시하고, 실패하면 스스로 진단·수정·재시도하는 러너로 복구합니다.</p></div>
     <div class="auto-card reveal"><div class="ic">🚀</div><h4>Git Push → 자동 배포</h4><p>자체 Git 서버와 웹훅으로 push 즉시 서버에 반영되는 배포 파이프라인을 직접 구축·운영합니다.</p></div>
     <div class="auto-card reveal"><div class="ic">🎬</div><h4>숏폼·블로그 무인 발행</h4><p>애니밀리 자동화 채널의 숏폼(YouTube·Instagram)과 블로그 글을 AI로 생성하고, 자막·SEO·BGM 믹싱·발행까지 자동 처리합니다.</p></div>
+  </div>
+
+  <div class="autogen reveal">
+    <span class="ag-badge">실제 자동 생성 결과물</span>
+    <h4>애니밀리 유튜브 — AI가 만든 "조선시대 동물 이야기" 시리즈</h4>
+    <p class="ag-sub">아래 영상들은 사람이 손대지 않고 AI 파이프라인이 <b>주제 선정 → 스토리 작성 → 이미지·영상 생성 → 자막·SEO → 업로드</b>까지 자동으로 만들어 발행한 실제 콘텐츠입니다. 이미지를 누르면 크게 볼 수 있습니다.</p>
+    <div class="gallery" data-imgs="autogen/00.jpg,autogen/01.jpg,autogen/02.jpg,autogen/03.jpg,autogen/04.jpg,autogen/05.jpg,autogen/06.jpg,autogen/07.jpg"></div>
+    <div class="plinks">
+      <a class="plink" href="https://www.youtube.com/channel/UCY-oRV501tUEiAR3xERKQ6A" target="_blank" rel="noopener">▶ 애니밀리 유튜브 채널</a>
+    </div>
   </div>
 </section>
 
